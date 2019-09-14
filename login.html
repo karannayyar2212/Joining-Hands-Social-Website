@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/formstyle.css')}}">
+  </head>
+<script src="{{url_for('static',filename='jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='jquery.validate.min.js')}}"></script>
+
+<script type="text/javascript">
+
+       $('document').ready(function()
+	   { 
+            $("#register-form").validate({
+                rules: {
+                    
+                    
+					
+                    name: {
+                        required: true,
+                        
+                    },
+                    password: {
+                        required: true,
+                       
+                    },
+					
+                messages: {
+                    name: "Please enter your name ",
+                    password: "password",
+					},
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });  
+
+});
+</script>
+
+  <body>
+  
+<img src="{{url_for('static',filename='form.jpg')}}" class="image">
+  <div class="head"></div>
+    <div class="login-page">
+      <div class="form">
+
+
+
+<form action="{{url_for('data')}}" method="post" id="register-form">
+    <div id="form-content">
+        <fieldset>
+
+            <div class="fieldgroup">
+                <input type="text" name="name" placeholder=" Name " />
+            </div>
+
+            <div class="fieldgroup">
+                <input type="password" name="pass" placeholder="password" />
+            </div>
+
+
+            <div class="fieldgroup">
+                <input type="submit" value="Login" class="submit">
+            </div>
+
+        </fieldset>
+    </div>
+</form>
+
+</div>
+      </div>
+    </div>
+  </body>
+
+</html>

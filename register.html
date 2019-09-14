@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/formstyle.css')}}">
+  </head>
+<script src="{{url_for('static',filename='jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='jquery.validate.min.js')}}"></script>
+
+<script type="text/javascript">
+
+       $('document').ready(function()
+	   { 
+            $("#register-form").validate({
+                rules: {
+                    
+                    type: "required",
+					
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    pass: {
+                        required: true,
+                        minlength: 8
+                    },
+					 name: {
+                        required: true,
+                        minlength: 8
+                    },
+					 phone: {
+                        required: true,
+                        minlength: 8
+                    },
+					
+					
+					 address: {
+                        required: true,
+                        minlength: 8
+                    },
+					
+					
+					
+					
+                },
+                messages: {
+                    name: "Please enter your name with 8 charcater",
+                    type: "admin/user",
+					phone: "Please enter your contact details",
+					address:"Enter address",
+                    pass: {
+                        required: "Please provide a password",
+                        minlength: "Password at least have 8 characters"
+                    },
+                    email: "Please enter a valid email address"
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });  
+
+});
+</script>
+
+  <body>
+  
+<img src="{{url_for('static',filename='form.jpg')}}" class="image">
+  <div class="head"></div>
+    <div class="login-page">
+      <div class="form">
+
+
+
+<form action="{{url_for('reg')}}" method="post" id="register-form">
+    <div id="form-content">
+        <fieldset>
+
+            <div class="fieldgroup">
+                <input type="text" name="name" placeholder=" Name " />
+            </div>
+
+            <div class="fieldgroup">
+                <input type="text" name="type" placeholder="admin/user" />
+            </div>
+
+            <div class="fieldgroup">
+ 				<input type="text" name="email" placeholder="Your E-mail ID" />
+            </div>
+
+            <div class="fieldgroup">
+               <input type="password" name="pass" placeholder="Your Password" />
+            </div>
+			
+			
+			 <div class="fieldgroup">
+               <input type="text" name="address" placeholder="Your Address" />
+            </div>
+			
+			 <div class="fieldgroup">
+               <input type="text" name="phone" placeholder="Contact details" />
+            </div>
+			
+
+            <div class="fieldgroup">
+                <input type="submit" value="Sign UP" class="submit">
+            </div>
+
+        </fieldset>
+    </div>
+</form>
+
+</div>
+      </div>
+    </div>
+  </body>
+
+</html>

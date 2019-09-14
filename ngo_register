@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NGO login request</title>
+  <link rel="stylesheet" type="text/css" href="formstyle.css.css">
+</head>
+
+<body>
+  <!--   <h1>Form3</h1> -->
+
+  <img src="images/form.jpg" class="image">
+  <div class="head"></div>
+  <!-- <h1 class="headline"><center>Organization Registration Form</center></h1> -->
+  <div class="login-page">
+    <div class="form">
+      
+      <form class="registration-form">
+        <input type="text" name="name" placeholder="Enter Your Organization's Name" required />
+        <button name  = 'save' >Register</button>
+        <!-- <p class="message">Not registered? <a href="#">Create an account</a></p>
+        <p class="mess">forgot password? <a href="#">click here</a></p> -->
+      </form>
+    </div>
+  </div>
+</body>
+</html>

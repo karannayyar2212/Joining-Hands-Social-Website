@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Donation Request </title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='formstyle.css')}}">
+</head>
+
+<body>
+  <!--   <h1>Form3</h1> -->
+
+    <img src="{{url_for('static', filename='form.jpg')}}" class="image">
+  <div class="head"></div>
+  <!-- <h1 class="headline"><center>Organization Registration Form</center></h1> -->
+  <div class="login-page">
+    <div class="form">
+
+      <form class="registration-form" action="{{url_for('ind')}}" method="post">
+        <input type="text" placeholder="Enter Your  Name" required />
+        <input type="text" placeholder="Enter Contact No." required />
+          <textarea rows="3" columns="10" placeholder="Enter Your Residence Address"  required ></textarea>
+
+<!--          <input type="text" placeholder="This will feed: (estimated no of people) " required minlength=10>-->
+
+
+
+       <textarea rows="3" columns="10" placeholder="Enter food description <br>
+eg: roti, rice, dal, etc
+       "  required ></textarea>
+ <input type="submit" value="Sign UP" class="submit">
+        <!-- <p class="message">Not registered? <a href="#">Create an account</a></p>
+        <p class="mess">forgot password? <a href="#">click here</a></p> -->
+      </form>
+      
+    </div>
+   </div>
+</body>
+</html>
